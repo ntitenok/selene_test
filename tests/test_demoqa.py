@@ -36,7 +36,7 @@ def test_form_student_registration():
         browser.element('[for="hobbies-checkbox-3"]').click()
 
 
-        browser.element('#uploadPicture').send_keys(os.path.abspath('data\\myfile'))
+        browser.element('#uploadPicture').send_keys(os.path.abspath('../data/myfile'))
 
 
         browser.element('#currentAddress').type('Мой адрес — ни дом и не улица')
