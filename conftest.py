@@ -1,10 +1,12 @@
 import pytest
 from selene import browser
-
+from selenium import webdriver
 
 @pytest.fixture(scope='function', autouse=True)
 def browser_management():
-
+    options = webdriver.ChromeOptions()
+    options.page_load_strategy = 'eager'
+    browser.config.driver_options = options
 
 
     browser.config.window_width = 1920
